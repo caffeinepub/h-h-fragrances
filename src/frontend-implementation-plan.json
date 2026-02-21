@@ -1,0 +1,368 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "H&H Fragrances - Award-Winning Scroll-Driven Luxury Website",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create full-screen hero section with 3D perfume bottle, cinematic lighting, and floating particles",
+      "acceptanceCriteria": [
+        "Full-screen hero section displays on page load",
+        "3D perfume bottle is centered and clearly labeled 'H&H Fragrances'",
+        "Dark background with soft cinematic lighting is visible",
+        "Subtle floating particles animate continuously in the scene"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create hero section component with Three.js canvas setup using React Three Fiber. Implement full-screen container with dark background, cinematic lighting (ambient + directional + spotlight), and 3D perfume bottle model centered in scene. Add floating particle system with subtle animation. Reference generated image frontend/public/assets/generated/perfume-bottle-hero.dim_800x1200.png for bottle design and lighting inspiration."
+        },
+        {
+          "path": "frontend/src/components/PerfumeBottle3D.tsx",
+          "operation": "create",
+          "description": "Create 3D perfume bottle component using React Three Fiber primitives (cylinder for bottle body, smaller cylinder for cap/atomizer). Apply materials with glass-like properties, reflections, and metallic accents. Add 'H&H Fragrances' label using Text3D or texture mapping. Ensure bottle is properly lit with soft cinematic lighting setup."
+        },
+        {
+          "path": "frontend/src/components/FloatingParticles.tsx",
+          "operation": "create",
+          "description": "Create floating particles component using React Three Fiber Points or InstancedMesh. Implement subtle floating animation with random drift patterns. Particles should be small, semi-transparent, and enhance ambient atmosphere without overwhelming the scene."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render HeroSection component as the first section of the page. Remove any placeholder content and ensure hero section takes full viewport height on initial load."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement scroll-triggered bottle rotation, atomizer press, and mist spray animation with smooth transition",
+      "acceptanceCriteria": [
+        "Bottle rotates smoothly as user scrolls down",
+        "Atomizer press animation triggers at appropriate scroll position",
+        "Mist spray animation expands and fills screen realistically",
+        "Smooth transition to next section occurs as mist covers screen",
+        "All animations feel fluid and synchronized with scroll speed"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Integrate GSAP ScrollTrigger to bind bottle rotation, atomizer press, and mist spray animations to scroll progress. Set up scroll timeline that triggers bottle rotation first, then atomizer press, then mist expansion. Ensure smooth synchronization with scroll speed and fluid transitions between animation phases."
+        },
+        {
+          "path": "frontend/src/components/PerfumeBottle3D.tsx",
+          "operation": "modify",
+          "description": "Add rotation animation controlled by scroll progress prop. Implement atomizer press animation that compresses the atomizer mechanism when triggered. Ensure rotation and press animations are smooth and synchronized with scroll position."
+        },
+        {
+          "path": "frontend/src/components/MistSpray.tsx",
+          "operation": "create",
+          "description": "Create mist spray animation component using React Three Fiber particle system or shader-based approach. Implement realistic expanding mist that starts from atomizer nozzle, expands outward, and gradually fills the screen. Add opacity and scale transitions for realistic spray effect. Trigger mist animation based on scroll progress passed from parent."
+        },
+        {
+          "path": "frontend/src/hooks/useScrollAnimation.ts",
+          "operation": "create",
+          "description": "Create custom hook to manage GSAP ScrollTrigger instances and animation timelines. Export utilities for synchronizing animations with scroll progress. Provide cleanup logic for scroll triggers on component unmount."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create 'The Essence' section with ivory background, elegant typography, stagger fade-in, and parallax effects",
+      "acceptanceCriteria": [
+        "Soft ivory background appears as mist clears",
+        "Headline 'Crafted for Presence' displays in large elegant typography",
+        "Subtext about craftsmanship and sensory storytelling is visible",
+        "Typography fades in with staggered timing",
+        "Subtle parallax effect applies to text and background on scroll"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/EssenceSection.tsx",
+          "operation": "create",
+          "description": "Create Essence section with soft ivory background. Display large serif headline 'Crafted for Presence' and subtext describing craftsmanship and sensory storytelling. Implement GSAP stagger animation for typography fade-in triggered when section enters viewport. Add subtle parallax effect to text and background layers using scroll progress."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render EssenceSection component after HeroSection. Ensure proper spacing and transition from mist animation into ivory background reveal."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create vertical scroll storytelling for Fragrance Notes with ingredient visuals, soft transitions, and particle effects",
+      "acceptanceCriteria": [
+        "Three distinct sections for Top Notes, Heart Notes, and Base Notes are present",
+        "Each section triggers animation when scrolled into view",
+        "Ingredient visuals (oud, rose, amber) animate with soft fades and depth",
+        "Light particle effects float in each note section",
+        "Smooth dissolve transitions occur between notes without hard cuts"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FragranceNotes.tsx",
+          "operation": "create",
+          "description": "Create vertical scroll storytelling section divided into Top Notes, Heart Notes, and Base Notes subsections. Each subsection triggers on scroll into view using ScrollTrigger. Implement smooth dissolve transitions between notes without hard cuts. Coordinate ingredient visual animations and particle effects for each note type."
+        },
+        {
+          "path": "frontend/src/components/NoteSection.tsx",
+          "operation": "create",
+          "description": "Create reusable note section component that accepts note type (Top/Heart/Base), ingredient visuals, and descriptive text. Implement fade-in animation with depth transition when section enters viewport. Add light floating particle effects specific to each note. Ensure smooth opacity transitions and depth effects."
+        },
+        {
+          "path": "frontend/src/components/IngredientVisual.tsx",
+          "operation": "create",
+          "description": "Create ingredient visual component that displays abstract imagery for oud, rose, and amber. Use generated images frontend/public/assets/generated/oud-abstract.dim_600x600.png, frontend/public/assets/generated/rose-abstract.dim_600x600.png, and frontend/public/assets/generated/amber-abstract.dim_600x600.png as visual assets. Implement soft fade and depth animations controlled by scroll progress. Apply subtle scale and opacity transitions."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render FragranceNotes component after EssenceSection. Ensure proper vertical flow and spacing between sections."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create horizontal scroll showcase for Signature Collection triggered by vertical scroll with bottle focus and details",
+      "acceptanceCriteria": [
+        "Vertical scroll triggers horizontal bottle sliding animation",
+        "Page locks momentarily during horizontal scroll sequence",
+        "Bottles slide horizontally with smooth motion",
+        "Centered bottle enlarges slightly when in focus",
+        "Fragrance name and poetic line display for each bottle",
+        "Overall animation feels premium and refined"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SignatureCollection.tsx",
+          "operation": "create",
+          "description": "Create Signature Collection section that converts vertical scroll into horizontal slide animation. Implement scroll lock mechanism during horizontal sequence using GSAP ScrollTrigger pin. Display perfume bottles in horizontal layout that slides as user scrolls. Coordinate bottle focus states and detail display. Use generated images frontend/public/assets/generated/collection-bottle-1.dim_400x600.png, frontend/public/assets/generated/collection-bottle-2.dim_400x600.png, and frontend/public/assets/generated/collection-bottle-3.dim_400x600.png as bottle visuals."
+        },
+        {
+          "path": "frontend/src/components/BottleCard.tsx",
+          "operation": "create",
+          "description": "Create bottle card component that displays perfume bottle image, fragrance name, and poetic line. Implement scale animation that slightly enlarges bottle when centered in viewport. Add smooth transitions and premium feel to all interactions. Accept bottle image path, name, and description as props."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render SignatureCollection component after FragranceNotes section. Ensure proper integration with scroll flow and section transitions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create full-width cinematic Brand Philosophy section with animated gradient background and elegant typography",
+      "acceptanceCriteria": [
+        "Full-width cinematic section displays",
+        "Soft animated gradient background is visible (or video if feasible)",
+        "Large typography displays brand philosophy content",
+        "Content fades in elegantly on scroll"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/BrandPhilosophy.tsx",
+          "operation": "create",
+          "description": "Create full-width cinematic section with soft animated gradient background (using CSS gradients with subtle animation). Display large serif typography for brand philosophy content. Implement elegant fade-in animation triggered by scroll using GSAP. Ensure section spans full viewport width and has appropriate vertical padding."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render BrandPhilosophy component after SignatureCollection section. Ensure full-width layout and proper spacing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create immersive ending section with fading bottle, headline, and CTA button with golden glow hover effect",
+      "acceptanceCriteria": [
+        "Final section has minimal black background",
+        "Single perfume bottle appears centered",
+        "Bottle fades into darkness as user scrolls to end",
+        "Headline 'Leave a trail that lingers.' appears after bottle fade",
+        "CTA button 'Explore the Collection' is visible",
+        "Button displays soft golden glow with subtle shimmer on hover"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/EndingSection.tsx",
+          "operation": "create",
+          "description": "Create final immersive section with minimal black background. Display centered perfume bottle that slowly fades to darkness as user scrolls to end using GSAP ScrollTrigger. Show headline 'Leave a trail that lingers.' after bottle fade completes. Include CTA button 'Explore the Collection' with soft golden glow and subtle shimmer hover effect using CSS transitions and box-shadow."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render EndingSection component as the final section of the page. Ensure proper spacing and that section serves as conclusion to scroll experience."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Implement smooth scrolling library for buttery fluid animations synchronized with scroll speed",
+      "acceptanceCriteria": [
+        "Smooth scrolling library is integrated throughout site",
+        "All scroll animations feel fluid and synchronized",
+        "Animations have slow, refined timing",
+        "No sudden jumps or jarring transitions occur",
+        "Overall motion design feels premium and expensive"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/package.json",
+          "operation": "modify",
+          "description": "Add gsap and @gsap/react dependencies for scroll-triggered animations and smooth scrolling functionality."
+        },
+        {
+          "path": "frontend/src/lib/smoothScroll.ts",
+          "operation": "create",
+          "description": "Create smooth scroll utility that initializes GSAP ScrollTrigger with configuration for buttery, fluid scroll motion. Configure scroll smoothing parameters for slow, refined, expensive feel. Export initialization function and configuration utilities."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Initialize smooth scroll functionality on component mount using smoothScroll utility. Ensure all sections benefit from fluid scroll synchronization. Clean up scroll instances on unmount."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Apply luxury brand design system with black, ivory, gold palette, elegant typography, and minimal navigation",
+      "acceptanceCriteria": [
+        "Black, ivory, and deep gold colors are used consistently",
+        "Serif font applied to headlines",
+        "Sans-serif font applied to body text",
+        "Layout is whitespace-heavy and balanced",
+        "Minimal top navigation bar present",
+        "Subtle hover states on interactive elements",
+        "No clutter or loud UI elements present"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define luxury brand color palette with CSS custom properties for black (#000000 or similar), ivory (#F8F6F0 or similar), and deep gold (#B8860B or similar). Import elegant serif font (e.g., Playfair Display, Cormorant) for headlines and clean sans-serif font (e.g., Inter, Montserrat) for body text. Set global typography styles, ensure whitespace-heavy layout with generous margins and padding. Apply minimal, refined aesthetic to all base elements."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with luxury brand colors (black, ivory, deepGold), serif and sans-serif font families. Configure spacing scale for whitespace-heavy layouts. Ensure configuration supports minimal, balanced design aesthetic."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "create",
+          "description": "Create minimal top navigation bar with clean layout. Include brand name/logo and minimal navigation links. Implement subtle hover states with refined transitions. Use luxury color palette and ensure navigation remains unobtrusive and elegant. Apply fixed positioning with subtle backdrop or transparency."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Navigation component at the top of the page layout. Ensure navigation overlays content with proper z-index and does not disrupt scroll experience."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Ensure site is fully responsive, performance optimized with lazy loading and lightweight assets",
+      "acceptanceCriteria": [
+        "Site layout adapts properly to mobile, tablet, and desktop viewports",
+        "Images and assets are optimized for web performance",
+        "Lazy loading is implemented for images and heavy content",
+        "Page load time is minimized",
+        "Animations perform smoothly without lag"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LazyImage.tsx",
+          "operation": "create",
+          "description": "Create lazy loading image component that defers loading images until they enter viewport. Use Intersection Observer API or React lazy loading utilities. Accept image source, alt text, and dimensions as props. Implement loading placeholder and fade-in transition on load."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all heavy content sections and images with lazy loading utilities. Ensure responsive layout using Tailwind responsive classes and CSS Grid/Flexbox. Test layout behavior across mobile, tablet, and desktop breakpoints. Optimize component rendering to prevent performance bottlenecks."
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Add responsive handling for Three.js canvas size and 3D scene. Adjust camera, lighting, and bottle scale for mobile viewports. Ensure 3D performance remains smooth on lower-powered devices by reducing particle counts or detail levels on mobile."
+        },
+        {
+          "path": "frontend/src/components/SignatureCollection.tsx",
+          "operation": "modify",
+          "description": "Implement responsive behavior for horizontal scroll showcase. On mobile, convert to vertical scroll or simplified card layout. Ensure touch interactions work smoothly and animations remain performant on mobile devices."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Add optional enhancements: sound toggle, scroll progress indicator, and micro interactions",
+      "acceptanceCriteria": [
+        "Sound toggle control allows user to enable/disable soft spray sound",
+        "Minimal vertical scroll progress indicator displays on page",
+        "Buttons have refined micro interactions on hover and click"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SoundToggle.tsx",
+          "operation": "create",
+          "description": "Create sound toggle component that allows user to enable/disable soft spray sound effect. Implement toggle button with elegant icon and smooth transition. Use React state to manage sound on/off status. Position toggle in fixed corner of viewport with minimal, refined styling."
+        },
+        {
+          "path": "frontend/src/components/ScrollProgress.tsx",
+          "operation": "create",
+          "description": "Create minimal vertical scroll progress indicator (thin line on side of viewport). Update progress dynamically based on scroll position using GSAP or vanilla scroll listeners. Style with luxury gold color and subtle opacity. Position fixed on left or right edge with elegant styling."
+        },
+        {
+          "path": "frontend/src/hooks/useSound.ts",
+          "operation": "create",
+          "description": "Create custom hook to manage audio playback for spray sound effect. Provide play/pause controls and volume management. Integrate with sound toggle state. Handle audio loading and browser autoplay restrictions gracefully."
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Integrate sound playback when mist spray animation triggers. Use useSound hook to play soft spray sound effect in sync with atomizer press and mist expansion. Respect sound toggle state from SoundToggle component."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add micro interaction styles for all buttons and interactive elements. Define hover, active, and focus states with subtle transitions, scale changes, and golden glow effects. Ensure all interactions feel refined and premium."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render SoundToggle and ScrollProgress components. Position them as fixed overlay elements that persist throughout scroll experience."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Implement cohesive award-winning visual design with cinematic storytelling and soft ambient lighting",
+      "acceptanceCriteria": [
+        "Overall design feels cinematic and immersive",
+        "Visual aesthetic matches high-end luxury perfume brand standards",
+        "Soft ambient lighting effects enhance mood throughout site",
+        "Design quality comparable to award-winning web experiences",
+        "Storytelling structure flows logically and emotionally"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Enhance global styles with cinematic visual treatments. Add soft ambient lighting effects using gradients, shadows, and glows. Define atmospheric overlays and depth effects. Ensure cohesive visual language across all sections that evokes luxury perfume brand aesthetic. Implement subtle vignette or glow effects where appropriate."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Review and refine overall storytelling structure and section flow. Ensure logical emotional progression from hero introduction through fragrance notes, collection showcase, philosophy, and ending. Verify all sections integrate cohesively with consistent luxury aesthetic. Add any necessary transition elements or spacing refinements for award-winning quality."
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Refine cinematic lighting setup in Three.js scene. Add soft ambient lighting effects, rim lighting on bottle, and subtle atmospheric glow. Ensure lighting creates editorial, high-end fashion campaign aesthetic. Adjust light intensities and colors for maximum cinematic impact."
+        }
+      ]
+    }
+  ]
+}

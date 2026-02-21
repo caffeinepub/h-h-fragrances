@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Award-winning ultra-premium scroll-driven website for H&H Fragrances luxury perfume brand. Cinematic, immersive experience with 3D perfume bottle interactions, scroll-triggered animations, fragrance storytelling sections, and editorial design using black, ivory, and gold palette.",
+  "architectural_notes": [
+    "Smooth scroll libraries (Lenis or GSAP ScrollTrigger) for scroll-triggered animations",
+    "3D perfume bottle rendering with rotation and mist spray effects",
+    "Scroll-locked horizontal carousel for collection showcase",
+    "Modular component structure for maintainability",
+    "Performance optimization with lazy loading for assets",
+    "Responsive design for all screen sizes",
+    "Black, ivory, and deep gold color palette system",
+    "Typography: elegant serif for headlines + clean sans-serif for body",
+    "Particle effects and ambient lighting system",
+    "Animation timing: slow, refined, expensive feel (no sudden jumps)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Luxury perfume bottle product image with elegant lighting for hero 3D model reference (perfume-bottle-hero.dim_800x1200.png)\n- Abstract oud wood texture visual for fragrance notes section (oud-abstract.dim_600x600.png)\n- Abstract rose petal visual for fragrance notes section (rose-abstract.dim_600x600.png)\n- Abstract amber glow visual for fragrance notes section (amber-abstract.dim_600x600.png)\n- First signature collection perfume bottle image (collection-bottle-1.dim_400x600.png)\n- Second signature collection perfume bottle image (collection-bottle-2.dim_400x600.png)\n- Third signature collection perfume bottle image (collection-bottle-3.dim_400x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-full-screen-hero-section-with-a-centered-beautifully-lit-3d-perfume-bottle-labeled-h-h-fragrances-using-three-js-and-react-three-fiber-background-must-be-dark-with-soft-cinematic-lighting-and-subtle-floating-particles",
+      "title": "Create a full-screen hero section with a centered, beautifully lit 3D perfume bottle labeled 'H&H Fragrances' using Three.js and React Three Fiber. Background must be dark with soft cinematic lighting and subtle floating particles.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-scroll-triggered-animations-for-the-hero-perfume-bottle-on-scroll-down-the-bottle-slowly-rotates-on-further-scroll-the-atomizer-presses-automatically-and-triggers-a-realistic-mist-spray-animation-that-expands-and-fills-the-screen-as-mist-covers-the-screen-transition-smoothly-into-the-next-section-use-gsap-scrolltrigger-or-lenis-for-fluid-synchronized-scroll-motion",
+      "title": "Implement scroll-triggered animations for the hero perfume bottle: on scroll down, the bottle slowly rotates; on further scroll, the atomizer presses automatically and triggers a realistic mist spray animation that expands and fills the screen; as mist covers the screen, transition smoothly into the next section. Use GSAP ScrollTrigger or Lenis for fluid, synchronized scroll motion.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-essence-section-with-soft-ivory-background-that-reveals-as-mist-clears-display-large-elegant-headline-crafted-for-presence-and-subtext-describing-craftsmanship-and-sensory-storytelling-typography-must-fade-in-with-stagger-animation-and-include-subtle-parallax-movement-on-text-and-background",
+      "title": "Create 'The Essence' section with soft ivory background that reveals as mist clears. Display large elegant headline 'Crafted for Presence' and subtext describing craftsmanship and sensory storytelling. Typography must fade in with stagger animation and include subtle parallax movement on text and background.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-vertical-scroll-storytelling-section-for-fragrance-notes-divided-into-top-notes-heart-notes-and-base-notes-each-note-section-must-trigger-when-scrolled-into-view-animate-ingredient-visuals-oud-rose-amber-abstract-visuals-use-soft-fade-and-depth-transitions-and-include-light-floating-particle-effects-notes-must-dissolve-smoothly-into-each-other-without-hard-cuts",
+      "title": "Create vertical scroll storytelling section for Fragrance Notes divided into Top Notes, Heart Notes, and Base Notes. Each note section must trigger when scrolled into view, animate ingredient visuals (oud, rose, amber abstract visuals), use soft fade and depth transitions, and include light floating particle effects. Notes must dissolve smoothly into each other without hard cuts.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-horizontal-scroll-showcase-triggered-by-vertical-scroll-for-signature-collection-when-user-scrolls-vertically-page-locks-momentarily-and-perfume-bottles-slide-horizontally-each-bottle-enlarges-slightly-when-centered-in-focus-and-displays-fragrance-name-with-a-short-poetic-line-animation-must-feel-premium-and-smooth",
+      "title": "Create horizontal scroll showcase triggered by vertical scroll for Signature Collection. When user scrolls vertically, page locks momentarily and perfume bottles slide horizontally. Each bottle enlarges slightly when centered in focus and displays fragrance name with a short poetic line. Animation must feel premium and smooth.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-full-width-cinematic-brand-philosophy-section-with-soft-video-background-or-animated-gradient-large-elegant-typography-and-fade-in-animation",
+      "title": "Create full-width cinematic Brand Philosophy section with soft video background or animated gradient, large elegant typography, and fade-in animation.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-final-immersive-ending-section-with-minimal-black-background-and-single-centered-perfume-bottle-as-user-scrolls-to-end-bottle-slowly-fades-into-darkness-and-headline-leave-a-trail-that-lingers-appears-include-cta-button-explore-the-collection-with-soft-golden-glow-and-subtle-shimmer-on-hover",
+      "title": "Create final immersive ending section with minimal black background and single centered perfume bottle. As user scrolls to end, bottle slowly fades into darkness and headline 'Leave a trail that lingers.' appears. Include CTA button 'Explore the Collection' with soft golden glow and subtle shimmer on hover.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-smooth-scrolling-library-lenis-or-gsap-scrolltrigger-for-buttery-fluid-scroll-animations-throughout-the-site-all-animations-must-feel-slow-refined-expensive-and-synchronized-with-scroll-speed-no-sudden-jumps-or-aggressive-motion",
+      "title": "Implement smooth scrolling library (Lenis or GSAP ScrollTrigger) for buttery, fluid scroll animations throughout the site. All animations must feel slow, refined, expensive, and synchronized with scroll speed. No sudden jumps or aggressive motion.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-luxury-brand-design-system-with-black-ivory-and-deep-gold-color-palette-use-elegant-serif-headline-font-and-clean-sans-serif-body-font-design-must-be-whitespace-heavy-minimal-balanced-with-no-clutter-or-loud-ui-elements-include-clean-minimal-top-navigation-bar-with-subtle-hover-states",
+      "title": "Apply luxury brand design system with black, ivory, and deep gold color palette. Use elegant serif headline font and clean sans-serif body font. Design must be whitespace-heavy, minimal, balanced, with no clutter or loud UI elements. Include clean minimal top navigation bar with subtle hover states.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-site-is-fully-responsive-performance-optimized-with-lazy-loading-for-assets-and-uses-lightweight-optimized-assets-for-all-images-and-animations",
+      "title": "Ensure site is fully responsive, performance optimized with lazy loading for assets, and uses lightweight optimized assets for all images and animations.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-optional-enhancements-sound-toggle-for-soft-spray-sound-effect-minimal-vertical-line-scroll-progress-indicator-and-micro-interactions-on-buttons",
+      "title": "Add optional enhancements: sound toggle for soft spray sound effect, minimal vertical line scroll progress indicator, and micro interactions on buttons.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-cohesive-award-winning-visual-design-inspired-by-high-end-fashion-and-fragrance-campaigns-the-aesthetic-should-feel-cinematic-editorial-and-modern-with-soft-ambient-lighting-effects-throughout-design-should-evoke-the-quality-of-webflow-awwwards-winning-websites-with-refined-motion-design-and-cinematic-storytelling-structure",
+      "title": "Implement a cohesive, award-winning visual design inspired by high-end fashion and fragrance campaigns. The aesthetic should feel cinematic, editorial, and modern with soft ambient lighting effects throughout. Design should evoke the quality of Webflow/Awwwards-winning websites with refined motion design and cinematic storytelling structure.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Hero section with interactive 3D perfume bottle that rotates, sprays mist on scroll, and transitions to next section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "The Essence section with soft ivory background, elegant typography fade-in, and parallax effects",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Fragrance Notes vertical scroll storytelling with Top/Heart/Base notes, ingredient visuals, and smooth dissolve transitions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Signature Collection horizontal scroll showcase triggered by vertical scroll with bottle focus animations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Brand Philosophy cinematic section with video background or animated gradient and elegant typography",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Final immersive ending with fading perfume bottle, headline reveal, and CTA button with golden glow hover effect",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Smooth scrolling implementation using Lenis or GSAP ScrollTrigger for fluid animations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Optional enhancements: sound toggle, scroll progress indicator, micro interactions, and lazy loading",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "H&H Fragrances",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

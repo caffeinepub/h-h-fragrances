@@ -1,0 +1,327 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T13:19:23.161Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 12,
+    "implemented": 12,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Create a full-screen hero section with a centered, beautifully lit 3D perfume bottle labeled 'H&H Fragrances' using Three.js and React Three Fiber. Background must be dark with soft cinematic lighting and subtle floating particles.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/PerfumeBottle3D.tsx",
+          "frontend/src/components/FloatingParticles.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/PerfumeBottle3D.tsx",
+          "frontend/src/components/FloatingParticles.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-10",
+        "summary": "Ensure site is fully responsive, performance optimized with lazy loading for assets, and uses lightweight optimized assets for all images and animations.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/LazyImage.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/SignatureCollection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/LazyImage.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/SignatureCollection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Add optional enhancements: sound toggle for soft spray sound effect, minimal vertical line scroll progress indicator, and micro interactions on buttons.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/SoundToggle.tsx",
+          "frontend/src/components/ScrollProgress.tsx",
+          "frontend/src/hooks/useSound.ts",
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/index.css",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/SoundToggle.tsx",
+          "frontend/src/components/ScrollProgress.tsx",
+          "frontend/src/hooks/useSound.ts",
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/index.css",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Implement a cohesive, award-winning visual design inspired by high-end fashion and fragrance campaigns. The aesthetic should feel cinematic, editorial, and modern with soft ambient lighting effects throughout. Design should evoke the quality of Webflow/Awwwards-winning websites with refined motion design and cinematic storytelling structure.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/App.tsx",
+          "frontend/src/components/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/App.tsx",
+          "frontend/src/components/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Implement scroll-triggered animations for the hero perfume bottle: on scroll down, the bottle slowly rotates; on further scroll, the atomizer presses automatically and triggers a realistic mist spray animation that expands and fills the screen; as mist covers the screen, transition smoothly into the next section. Use GSAP ScrollTrigger or Lenis for fluid, synchronized scroll motion.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/PerfumeBottle3D.tsx",
+          "frontend/src/components/MistSpray.tsx",
+          "frontend/src/hooks/useScrollAnimation.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/PerfumeBottle3D.tsx",
+          "frontend/src/components/MistSpray.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Create 'The Essence' section with soft ivory background that reveals as mist clears. Display large elegant headline 'Crafted for Presence' and subtext describing craftsmanship and sensory storytelling. Typography must fade in with stagger animation and include subtle parallax movement on text and background.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/EssenceSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/EssenceSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Create vertical scroll storytelling section for Fragrance Notes divided into Top Notes, Heart Notes, and Base Notes. Each note section must trigger when scrolled into view, animate ingredient visuals (oud, rose, amber abstract visuals), use soft fade and depth transitions, and include light floating particle effects. Notes must dissolve smoothly into each other without hard cuts.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/FragranceNotes.tsx",
+          "frontend/src/components/NoteSection.tsx",
+          "frontend/src/components/IngredientVisual.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/FragranceNotes.tsx",
+          "frontend/src/components/NoteSection.tsx",
+          "frontend/src/components/IngredientVisual.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Create horizontal scroll showcase triggered by vertical scroll for Signature Collection. When user scrolls vertically, page locks momentarily and perfume bottles slide horizontally. Each bottle enlarges slightly when centered in focus and displays fragrance name with a short poetic line. Animation must feel premium and smooth.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/SignatureCollection.tsx",
+          "frontend/src/components/BottleCard.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/SignatureCollection.tsx",
+          "frontend/src/components/BottleCard.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Create full-width cinematic Brand Philosophy section with soft video background or animated gradient, large elegant typography, and fade-in animation.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/BrandPhilosophy.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/BrandPhilosophy.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Create final immersive ending section with minimal black background and single centered perfume bottle. As user scrolls to end, bottle slowly fades into darkness and headline 'Leave a trail that lingers.' appears. Include CTA button 'Explore the Collection' with soft golden glow and subtle shimmer on hover.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/EndingSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/EndingSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Implement smooth scrolling library (Lenis or GSAP ScrollTrigger) for buttery, fluid scroll animations throughout the site. All animations must feel slow, refined, expensive, and synchronized with scroll speed. No sudden jumps or aggressive motion.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/package.json",
+          "frontend/src/lib/smoothScroll.ts",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/lib/smoothScroll.ts",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Apply luxury brand design system with black, ivory, and deep gold color palette. Use elegant serif headline font and clean sans-serif body font. Design must be whitespace-heavy, minimal, balanced, with no clutter or loud UI elements. Include clean minimal top navigation bar with subtle hover states.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/App.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/amber-abstract.dim_600x600.png",
+    "frontend/public/assets/generated/collection-bottle-1.dim_400x600.png",
+    "frontend/public/assets/generated/collection-bottle-2.dim_400x600.png",
+    "frontend/public/assets/generated/collection-bottle-3.dim_400x600.png",
+    "frontend/public/assets/generated/oud-abstract.dim_600x600.png",
+    "frontend/public/assets/generated/perfume-bottle-hero.dim_800x1200.png",
+    "frontend/public/assets/generated/rose-abstract.dim_600x600.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/BottleCard.tsx",
+    "frontend/src/components/BrandPhilosophy.tsx",
+    "frontend/src/components/EndingSection.tsx",
+    "frontend/src/components/EssenceSection.tsx",
+    "frontend/src/components/FloatingParticles.tsx",
+    "frontend/src/components/FragranceNotes.tsx",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/IngredientVisual.tsx",
+    "frontend/src/components/LazyImage.tsx",
+    "frontend/src/components/MistSpray.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/NoteSection.tsx",
+    "frontend/src/components/PerfumeBottle3D.tsx",
+    "frontend/src/components/ScrollProgress.tsx",
+    "frontend/src/components/SignatureCollection.tsx",
+    "frontend/src/components/SoundToggle.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useSound.ts",
+    "frontend/src/index.css",
+    "frontend/src/lib/smoothScroll.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

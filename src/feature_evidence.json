@@ -1,0 +1,248 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-full-screen-hero-section-with-a-centered-beautifully-lit-3d-perfume-bottle-labeled-h-h-fragrances-using-three-js-and-react-three-fiber-background-must-be-dark-with-soft-cinematic-lighting-and-subtle-floating-particles",
+      "featureTitle": "Create a full-screen hero section with a centered, beautifully lit 3D perfume bottle labeled 'H&H Fragrances' using Three.js and React Three Fiber. Background must be dark with soft cinematic lighting and subtle floating particles.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/FloatingParticles.tsx",
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/PerfumeBottle3D.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-scroll-triggered-animations-for-the-hero-perfume-bottle-on-scroll-down-the-bottle-slowly-rotates-on-further-scroll-the-atomizer-presses-automatically-and-triggers-a-realistic-mist-spray-animation-that-expands-and-fills-the-screen-as-mist-covers-the-screen-transition-smoothly-into-the-next-section-use-gsap-scrolltrigger-or-lenis-for-fluid-synchronized-scroll-motion",
+      "featureTitle": "Implement scroll-triggered animations for the hero perfume bottle: on scroll down, the bottle slowly rotates; on further scroll, the atomizer presses automatically and triggers a realistic mist spray animation that expands and fills the screen; as mist covers the screen, transition smoothly into the next section. Use GSAP ScrollTrigger or Lenis for fluid, synchronized scroll motion.",
+      "files": [
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/MistSpray.tsx",
+        "frontend/src/components/PerfumeBottle3D.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-essence-section-with-soft-ivory-background-that-reveals-as-mist-clears-display-large-elegant-headline-crafted-for-presence-and-subtext-describing-craftsmanship-and-sensory-storytelling-typography-must-fade-in-with-stagger-animation-and-include-subtle-parallax-movement-on-text-and-background",
+      "featureTitle": "Create 'The Essence' section with soft ivory background that reveals as mist clears. Display large elegant headline 'Crafted for Presence' and subtext describing craftsmanship and sensory storytelling. Typography must fade in with stagger animation and include subtle parallax movement on text and background.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/EssenceSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-vertical-scroll-storytelling-section-for-fragrance-notes-divided-into-top-notes-heart-notes-and-base-notes-each-note-section-must-trigger-when-scrolled-into-view-animate-ingredient-visuals-oud-rose-amber-abstract-visuals-use-soft-fade-and-depth-transitions-and-include-light-floating-particle-effects-notes-must-dissolve-smoothly-into-each-other-without-hard-cuts",
+      "featureTitle": "Create vertical scroll storytelling section for Fragrance Notes divided into Top Notes, Heart Notes, and Base Notes. Each note section must trigger when scrolled into view, animate ingredient visuals (oud, rose, amber abstract visuals), use soft fade and depth transitions, and include light floating particle effects. Notes must dissolve smoothly into each other without hard cuts.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/FragranceNotes.tsx",
+        "frontend/src/components/IngredientVisual.tsx",
+        "frontend/src/components/NoteSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-horizontal-scroll-showcase-triggered-by-vertical-scroll-for-signature-collection-when-user-scrolls-vertically-page-locks-momentarily-and-perfume-bottles-slide-horizontally-each-bottle-enlarges-slightly-when-centered-in-focus-and-displays-fragrance-name-with-a-short-poetic-line-animation-must-feel-premium-and-smooth",
+      "featureTitle": "Create horizontal scroll showcase triggered by vertical scroll for Signature Collection. When user scrolls vertically, page locks momentarily and perfume bottles slide horizontally. Each bottle enlarges slightly when centered in focus and displays fragrance name with a short poetic line. Animation must feel premium and smooth.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/BottleCard.tsx",
+        "frontend/src/components/SignatureCollection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-full-width-cinematic-brand-philosophy-section-with-soft-video-background-or-animated-gradient-large-elegant-typography-and-fade-in-animation",
+      "featureTitle": "Create full-width cinematic Brand Philosophy section with soft video background or animated gradient, large elegant typography, and fade-in animation.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/BrandPhilosophy.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-final-immersive-ending-section-with-minimal-black-background-and-single-centered-perfume-bottle-as-user-scrolls-to-end-bottle-slowly-fades-into-darkness-and-headline-leave-a-trail-that-lingers-appears-include-cta-button-explore-the-collection-with-soft-golden-glow-and-subtle-shimmer-on-hover",
+      "featureTitle": "Create final immersive ending section with minimal black background and single centered perfume bottle. As user scrolls to end, bottle slowly fades into darkness and headline 'Leave a trail that lingers.' appears. Include CTA button 'Explore the Collection' with soft golden glow and subtle shimmer on hover.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/EndingSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-smooth-scrolling-library-lenis-or-gsap-scrolltrigger-for-buttery-fluid-scroll-animations-throughout-the-site-all-animations-must-feel-slow-refined-expensive-and-synchronized-with-scroll-speed-no-sudden-jumps-or-aggressive-motion",
+      "featureTitle": "Implement smooth scrolling library (Lenis or GSAP ScrollTrigger) for buttery, fluid scroll animations throughout the site. All animations must feel slow, refined, expensive, and synchronized with scroll speed. No sudden jumps or aggressive motion.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/lib/smoothScroll.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-luxury-brand-design-system-with-black-ivory-and-deep-gold-color-palette-use-elegant-serif-headline-font-and-clean-sans-serif-body-font-design-must-be-whitespace-heavy-minimal-balanced-with-no-clutter-or-loud-ui-elements-include-clean-minimal-top-navigation-bar-with-subtle-hover-states",
+      "featureTitle": "Apply luxury brand design system with black, ivory, and deep gold color palette. Use elegant serif headline font and clean sans-serif body font. Design must be whitespace-heavy, minimal, balanced, with no clutter or loud UI elements. Include clean minimal top navigation bar with subtle hover states.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-site-is-fully-responsive-performance-optimized-with-lazy-loading-for-assets-and-uses-lightweight-optimized-assets-for-all-images-and-animations",
+      "featureTitle": "Ensure site is fully responsive, performance optimized with lazy loading for assets, and uses lightweight optimized assets for all images and animations.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/LazyImage.tsx",
+        "frontend/src/components/SignatureCollection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-optional-enhancements-sound-toggle-for-soft-spray-sound-effect-minimal-vertical-line-scroll-progress-indicator-and-micro-interactions-on-buttons",
+      "featureTitle": "Add optional enhancements: sound toggle for soft spray sound effect, minimal vertical line scroll progress indicator, and micro interactions on buttons.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/ScrollProgress.tsx",
+        "frontend/src/components/SoundToggle.tsx",
+        "frontend/src/hooks/useSound.ts",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-cohesive-award-winning-visual-design-inspired-by-high-end-fashion-and-fragrance-campaigns-the-aesthetic-should-feel-cinematic-editorial-and-modern-with-soft-ambient-lighting-effects-throughout-design-should-evoke-the-quality-of-webflow-awwwards-winning-websites-with-refined-motion-design-and-cinematic-storytelling-structure",
+      "featureTitle": "Implement a cohesive, award-winning visual design inspired by high-end fashion and fragrance campaigns. The aesthetic should feel cinematic, editorial, and modern with soft ambient lighting effects throughout. Design should evoke the quality of Webflow/Awwwards-winning websites with refined motion design and cinematic storytelling structure.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
